@@ -16,7 +16,7 @@ const Auth = props => (
 class Root extends Component {
   constructor() {
     super();
-    this.state = { authorized: true };
+    this.state = { authorized: false };
     this.handlePassword = this.handlePassword.bind(this);
   }
 
