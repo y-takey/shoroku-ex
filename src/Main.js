@@ -8,6 +8,8 @@ import List from "./List";
 import Manage from "./Manage";
 import Event from "./Event";
 
+const pathPrefix = process.env.NODE_ENV === "development" ? "" : "/shoroku-ex";
+
 class Main extends Component {
   render() {
     return (
@@ -22,9 +24,9 @@ class Main extends Component {
           </AppBar>
 
           <div style={{ padding: 10 }}>
-            <Route exact path="/" component={List} />
-            <Route path="/:eventId/manage" component={Manage} />
-            <Route path="/:eventId/app" component={Event} />
+            <Route exact path={`${pathPrefix}/`} component={List} />
+            <Route path={`${pathPrefix}/:eventId/manage`} component={Manage} />
+            <Route path={`${pathPrefix}/:eventId/app`} component={Event} />
           </div>
         </div>
       </Router>
