@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import Button from "material-ui/Button";
 import Paper from "material-ui/Paper";
 import Table, { TableBody, TableCell, TableHead, TableRow } from "material-ui/Table";
+import AddIcon from "material-ui-icons/Add";
+import EditIcon from "material-ui-icons/Edit";
+import DashboardIcon from "material-ui-icons/Dashboard";
 
 import LinkButton from "./LinkButton";
 
@@ -12,7 +15,7 @@ class List extends Component {
   render() {
     return (
       <div>
-        <LinkButton label="新規追加" to="/" />
+        <LinkButton label="新規追加" icon={<AddIcon />} to="/" />
         <Paper style={{ marginTop: 10 }}>
           <Table>
             <TableHead>
@@ -34,9 +37,9 @@ class List extends Component {
                     <TableCell>{n.term}</TableCell>
                     <TableCell>{n.location}</TableCell>
                     <TableCell>
-                      <LinkButton label="編集" to={`/${n.id}/manage`} />
+                      <LinkButton label="編集" icon={<EditIcon />} to={`/${n.id}/manage`} />
                       &nbsp;&nbsp;
-                      <LinkButton label="アプリ" to={`/${n.id}/app`} />
+                      <LinkButton label="アプリ" icon={<DashboardIcon />} to={`/${n.id}/app`} />
                     </TableCell>
                   </TableRow>
                 );
