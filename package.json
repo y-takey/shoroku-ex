@@ -1,0 +1,27 @@
+{
+  "name": "shoroku-ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/parcel src/index.html --open",
+    "build": "node_modules/.bin/parcel build src/index.html -d '' --public-url \"/\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y-takey/shoroku-ex.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/y-takey/shoroku-ex/issues"
+  },
+  "homepage": "https://github.com/y-takey/shoroku-ex#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "parcel-bundler": "^1.6.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
