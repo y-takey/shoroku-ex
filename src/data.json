@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "event": "第60回○×学会 学術総会",
+      "title": "△と□について ～科学と実践～",
+      "term": "平成30年x月xx日（金）～ xx日（日）",
+      "location": "アクロス福岡 xxx",
+      "timetables": []
+    },
+    {
+      "id": 2,
+      "event": "第19回○×学会 学術集会",
+      "title": "メインテーマ",
+      "term": "平成30年x月xx日（月）～ xx日（水）",
+      "location": "xxx",
+      "timetables": []
+    },
+    {
+      "id": 3,
+      "event": "第5回 ○×",
+      "title": "XXXXXXXXXX ",
+      "term": "平成30年x月xx日（金）～ xx日（日）",
+      "location": "福岡 xxx",
+      "timetables": []
+    },
+    {
+      "id": 4,
+      "event": "第23回 △□△",
+      "title": "XXXXXXXXXX XXXX",
+      "term": "平成30年x月xx日（火）～ xx日（木）",
+      "location": "xxx",
+      "timetables": []
+    }
+  ]
+}

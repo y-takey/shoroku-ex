@@ -1,10 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
+import Reboot from "material-ui/Reboot";
+import blue from "material-ui/colors/blue";
+
+import Root from "./Root";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: blue
+  }
+});
 
 const App = () => (
-  <div className="App">
-    <h1 className="App-Title">Hello 抄録アプリ</h1>
-  </div>
+  <MuiThemeProvider theme={theme}>
+    <Reboot />
+    <Root />
+  </MuiThemeProvider>
 );
 
 ReactDOM.render(<App />, document.getElementById("root"));
