@@ -16,24 +16,12 @@ class Main extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <AppBar position="static">
-            <Toolbar>
-              <Typography variant="title" color="inherit">
-                管理画面（案）
-              </Typography>
-            </Toolbar>
-          </AppBar>
-
-          <div style={{ padding: 10 }}>
-            <Switch>
-              <Route exact path="/" component={List} />
-              <Route path="/:eventId/manage" component={Manage} />
-              <Route path="/:eventId/app" component={Event} />
-              <Route component={NoMatch} />
-            </Switch>
-          </div>
-        </div>
+        <Switch>
+          <Route exact path="/" component={List} />
+          <Route path="/:eventId/manage" component={Manage} />
+          <Route path="/:eventId/app" component={Event} />
+          <Route component={NoMatch} />
+        </Switch>
       </Router>
     );
   }
