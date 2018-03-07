@@ -12,8 +12,9 @@ import BookmarkIcon from "material-ui-icons/Bookmark";
 import LinkButton from "./LinkButton";
 import Home from "./event/Home";
 import Info from "./event/Info";
+import TimeTable from "./event/TimeTable";
 
-const panels = [Home, Info, Home, Home];
+const panels = [Home, Info, TimeTable, Home];
 const data = require("./data.json");
 
 class Event extends Component {
