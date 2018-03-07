@@ -13,8 +13,9 @@ import LinkButton from "./LinkButton";
 import Home from "./event/Home";
 import Info from "./event/Info";
 import TimeTable from "./event/TimeTable";
+import Bookmark from "./event/Bookmark";
 
-const panels = [Home, Info, TimeTable, Home];
+const panels = [Home, Info, TimeTable, Bookmark];
 const data = require("./data.json");
 
 class Event extends Component {
@@ -33,7 +34,7 @@ class Event extends Component {
     const Panel = panels[value];
 
     return (
-      <div style={{ height: "100vh", overflowY: "scroll" }}>
+      <div style={{ height: "100vh", overflowY: "scroll", marginBottom: 60 }}>
         <AppBar position="static" style={{ flexGrow: 1 }}>
           <Toolbar>
             <Typography variant="title" color="inherit" style={{ flex: 1 }}>
