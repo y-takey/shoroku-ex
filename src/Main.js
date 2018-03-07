@@ -19,7 +19,7 @@ class Main extends Component {
         <Switch>
           <Route exact path="/" component={List} />
           <Route path="/:eventId/manage" component={Manage} />
-          <Route path="/:eventId/app" component={Event} />
+          <Route path="/:eventId/app/:sessionId?" component={Event} />
           <Route component={NoMatch} />
         </Switch>
       </Router>

@@ -4,6 +4,8 @@ import Card, { CardActions, CardContent } from "material-ui/Card";
 import Typography from "material-ui/Typography";
 import Button from "material-ui/Button";
 
+import LinkButton from "../LinkButton";
+
 const styles = {
   card: {
     minWidth: "100%"
@@ -41,7 +43,7 @@ const Bookmark = props => {
             </CardContent>
             <CardActions>
               <Button size="small">削除</Button>
-              <Button size="small">詳細</Button>
+              <LinkButton label="詳細" to="/1/app/2" />
             </CardActions>
           </Card>
         </Grid>
@@ -58,7 +60,7 @@ const Bookmark = props => {
             </CardContent>
             <CardActions>
               <Button size="small">削除</Button>
-              <Button size="small">詳細</Button>
+              <LinkButton label="詳細" to="/1/app/2" />
             </CardActions>
           </Card>
         </Grid>

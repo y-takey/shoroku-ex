@@ -26,7 +26,7 @@ class TimeTable extends Component {
       },
       eventClick: (calEvent, jsEvent, view) => {
         console.log("[eventClick event]", calEvent, jsEvent, view);
-        history.push("/");
+        history.push("/1/app/2");
       },
       events: [
         {

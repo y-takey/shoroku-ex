@@ -14,6 +14,7 @@ import Home from "./event/Home";
 import Info from "./event/Info";
 import TimeTable from "./event/TimeTable";
 import Bookmark from "./event/Bookmark";
+import Session from "./event/Session";
 
 const panels = [Home, Info, TimeTable, Bookmark];
 const data = require("./data.json");
@@ -30,6 +31,7 @@ class Event extends Component {
   render() {
     const { value } = this.state;
     const id = Number(this.props.match.params.eventId);
+    const sessionId = Number(this.props.match.params.sessionId);
     const rec = data.events.find(el => el.id === id);
     const Panel = panels[value];
 
@@ -44,9 +46,7 @@ class Event extends Component {
           </Toolbar>
         </AppBar>
 
-        <div style={{ width: "100%" }}>
-          <Panel data={rec} />
-        </div>
+        <div style={{ width: "100%" }}>{sessionId ? <Session /> : <Panel data={rec} />}</div>
 
         <BottomNavigation
           value={value}
