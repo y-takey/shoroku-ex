@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "material-ui/Button";
 
 const LinkButton = props => (
-  <Button variant="raised" color="primary" component={Link} to={props.to}>
+  <Button variant="raised" color="primary" component={Link} {...props}>
     {props.icon}
     &nbsp;
     {props.label}
