@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import AppBar from "material-ui/AppBar";
 import Toolbar from "material-ui/Toolbar";
 import Typography from "material-ui/Typography";
@@ -8,7 +8,9 @@ import List from "./List";
 import Manage from "./Manage";
 import Event from "./Event";
 
-const pathPrefix = process.env.NODE_ENV === "development" ? "" : "/shoroku-ex";
+const NoMatch = props => {
+  return <div>No Match</div>;
+};
 
 class Main extends Component {
   render() {
@@ -24,9 +26,12 @@ class Main extends Component {
           </AppBar>
 
           <div style={{ padding: 10 }}>
-            <Route exact path={`${pathPrefix}/`} component={List} />
-            <Route path={`${pathPrefix}/:eventId/manage`} component={Manage} />
-            <Route path={`${pathPrefix}/:eventId/app`} component={Event} />
+            <Switch>
+              <Route exact path="/" component={List} />
+              <Route path="/:eventId/manage" component={Manage} />
+              <Route path="/:eventId/app" component={Event} />
+              <Route component={NoMatch} />
+            </Switch>
           </div>
         </div>
       </Router>
