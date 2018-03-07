@@ -18,7 +18,9 @@
     "url": "https://github.com/y-takey/shoroku-ex/issues"
   },
   "homepage": "https://github.com/y-takey/shoroku-ex#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1"
+  },
   "dependencies": {
     "material-ui": "^1.0.0-beta.36",
     "material-ui-icons": "^1.0.0-beta.36",
